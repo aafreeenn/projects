@@ -1,0 +1,347 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    color: #222;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 37px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #ff6b6b;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+}
+
+/* About Us Section */
+.about-us-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color over video */
+    z-index: 1;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Send video to background */
+    filter: brightness(60%); 
+}
+
+.about-us-content {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.about-us-content h2 {
+    font-size: 58px;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+.about-us-content p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* Main Section */
+.main-section {
+    position: relative;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    padding: 150px 20px;
+    text-align: center;
+    color: white;
+    background-attachment: fixed;
+}
+
+.main .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('graphics-pattern.png');
+    opacity: 0.2;
+}
+
+.main h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FECACA;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main-content {
+    flex: 1;
+    text-align: center;
+    color: black;
+}
+
+.main-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.main-content .shop-btn {
+    display: inline-block;
+    background-color: #FF6B6B;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.main-content .shop-btn:hover {
+    background-color: #FF4E4E;
+    transform: scale(1.1); /* Button will grow slightly when hovered */
+}
+
+.main-video {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.main-video video {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-video {
+        margin: 20px 0;
+    }
+}
+
+
+
+.btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e45757;
+}
+
+/* Products Section */
+#products {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fafafa;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ff6b6b;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.product-card h3 {
+    color: #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main h1 {
+        font-size: 36px;
+    }
+
+    .main p {
+        font-size: 18px;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #334d4d;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #e0ebeb;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer .icons {
+    margin-top: 10px;
+}
+
+.footer .icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer .icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Contact Us Section */
+.contact-section {
+    background-color: #334d4d;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    color: #e0ebeb;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #e0ebeb;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info a {
+    color: #d26a5c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #bb5649;
+}
+
